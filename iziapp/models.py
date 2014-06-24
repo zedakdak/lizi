@@ -3,6 +3,7 @@ from django.db import models
 
 # Customer : classe pour le client
 # Uniquement avec le champ 'Name' pour permettre la mise au point
+# ajoout pour git encore
 class Customer(models.Model):
     """
     Cette classe represente le client
