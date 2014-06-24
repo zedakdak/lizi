@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+#appLayout {
+  height: 100%;
+}
+#leftCol {
+  width: 10em;
+}
+
+.topPanel {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  background-color: #669999;
+}
+
+.claro .demoLayout .edgePanel {
+  font-size: 20px;
+  background-color: #669999;
+}
+
+#viewsChart {
+  width: 550px;
+  height: 550px;
+}
+
+.dijitButtonNode {
+  margin-left: 15px;
+  height:100%;
+}
+
+.dijitButtonNode.test{
+  margin-left: 100px;
+  height:100%;
+}
+
+.test{
+  margin-left: 100px;
+  height:100%;
+}
+.buttonleft{
+  margin-left: 80px;
+  height:100%;
+}
+.button{
+  height:100%;
+}
+
+
+.liste_container { /* Texte de la colonne gauche */
+  height:500px;
+  background-color: #EDEBEB;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color=#999999);/* IE */
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color=#999999)";/* slightly different syntax for IE8 */
+}
+
+
+.liste_recents { /* Texte de la colonne gauche */
+  background-color: #FFFFFF;
+  float:left;
+  border-style: 1px solid #777777;
+  width: 89%;
+  height: 500px;
+  text-align:center;
+  font-size:14px;
+  align:center;
+  clear:both;
+}

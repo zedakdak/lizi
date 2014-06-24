@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="">
+<head>
+  <meta charset="utf-8">
+  <title>NG</title>
+  <script src="app/bower_components/angular/angular.js"></script>
+
+<body>
+<div ng-controller="ContactController">
+     Email:<input type="text" ng-model="newcontact"/>
+    <button ng-click="add()">Add</button>
+    <h2>Contacts</h2>
+
+    <ul>
+        <li ng-repeat="contact in contacts"> {{ contact }} </li>
+    </ul>
+
+</div>
+<script type="text/javascript">
+    function ContactController($scope) {
+        $scope.contacts = ["hi@email.com", "hello@email.com"];
+
+        $scope.add = function() {
+        $scope.contacts.push($scope.newcontact);
+        $scope.newcontact = "";
+        }
+    }
+</script>
+</body>
+</head>
+</html>

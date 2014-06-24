@@ -1,0 +1,18 @@
+<div ng-controller="CustomerListController">
+     Client:<input ng-model="query"/>
+     Tri:
+     <select ng-model='orderProp'>
+      <option value="name"> par Nom</option>
+    </select>
+
+    <button ng-click="add()">Add</button>
+    <h2>Clients</h2>
+
+    <ul class="customers">
+        <li ng-repeat="customer in customers | filter:query | orderBy:orderProp">
+          <a href="#/customers/{{customer.id}}">{{customer.name}}</a>
+          <span> {{ customer.email }} </span>
+         </li>
+    </ul>
+
+</div>
