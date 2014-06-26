@@ -1,0 +1,16 @@
+{
+  "name": "angular",
+  "version": "1.3.0-build.2812+sha.2d5a849",
+  "main": "./angular.js",
+  "dependencies": {},
+  "homepage": "https://github.com/angular/bower-angular",
+  "_release": "1.3.0-build.2812+sha.2d5a849",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.0-build.2812+sha.2d5a849",
+    "commit": "a465d2143fd3987d1ff0b8bd5ccd6077991930ea"
+  },
+  "_source": "git://github.com/angular/bower-angular.git",
+  "_target": "1.3.x",
+  "_originalSource": "angular"
+}
