@@ -10,7 +10,7 @@ from iziapp.models import InvoiceItem
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Customer
-        fields = ('id','name','email')
+        fields = ('id','name','email','telephone')
 
 
 class InvoiceItemSerializer(serializers.HyperlinkedModelSerializer):

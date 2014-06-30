@@ -12,6 +12,7 @@
     <li ng-repeat="customer in customers | filter:query | orderBy:orderProp">
       <a href="#/customers/{{customer.id}}">{{customer.name}}</a>
       <span> {{ customer.email }} </span>
+      <span> Telephone : {{ customer.telephone }} </span>
     </li>
   </ul>
 

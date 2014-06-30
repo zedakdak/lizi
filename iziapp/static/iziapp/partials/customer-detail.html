@@ -4,6 +4,7 @@ TBD: detail view for <span>{{customerId}}</span>
       <dt>Client</dt>
       <dd>{{ customer.name | checkmark}}</dd>
       <input type="text" ng-model="newCustomerName" />
+      <input size= "4" type="text" ng-model="newCustomerTelephone" />
       <button ng-click="create(newCustomerName)">Créer</button>
-      <button ng-click="delete(newCustomerName)">Supprimer</button>
+      <button ng-click="delete(customer)">Supprimer</button>
 </dl>

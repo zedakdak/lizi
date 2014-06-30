@@ -23,13 +23,17 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
         var customer = new Customer();
         customer.name = newCustomerName;
         customer.email = 'testmail';
+        //customer.telephone = '12345678';
+        customer.telephone = $scope.newCustomerTelephone;
         customer.$save();
         //$scope.customers.push(customer);
      }
      // suppression
-     $scope.delete = function(Customer) {
+     $scope.delete = function(customer) {
         console.log('suppression');
-        console.log($scope)
+        console.log($scope);
+        console.log(customer);
+        customer.$save();
      }
  }]);
 

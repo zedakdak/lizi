@@ -3,13 +3,13 @@ from django.db import models
 
 # Customer : classe pour le client
 # Uniquement avec le champ 'Name' pour permettre la mise au point
-# ajoout pour git encore
 class Customer(models.Model):
     """
     Cette classe represente le client
     """
     name = models.CharField(max_length=20, blank=True, default='')
-    email = models.CharField(max_length=20, blank=True, default='')   
+    email = models.CharField(max_length=20, blank=True, default='')
+    telephone = models.CharField(max_length=8, blank=True, default='')
 
 # Classe : classe pour la en-tete de facture
 class Invoice(models.Model):
