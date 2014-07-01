@@ -7,13 +7,16 @@ iziServices.factory('Customer', ['$resource',
   return $resource('/customers/:id', {}, {
       query: {method:'GET', params:{id:''}, isArray:true},
       get: {method:'GET', params:{id:'@id'}},
-      save: {method: 'POST', params:{id:'@id'}}
+      save: {method: 'POST', params:{id:'@id'}},
+      remove: {method: 'DELETE', params:{id:'@id'}},
+      update: {method: 'PUT', params:{id:'@id'}}
     });
 }]);
 
 iziServices.factory('CustomerDetail', ['$resource',
    function($resource){
   return $resource('/customers/:id', {}, {
-      query: {method:'GET', params:{id:'@id'}}
+      query: {method:'GET', params:{id:'@id'}},
+      save: {method: 'POST', params:{id:'@id'}}
        });
 }]);

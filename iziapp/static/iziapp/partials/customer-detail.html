@@ -2,9 +2,11 @@ TBD: detail view for <span>{{customerId}}</span>
 {{ customer.name }}
 <dl>
       <dt>Client</dt>
-      <dd>{{ customer.name | checkmark}}</dd>
-      <input type="text" ng-model="newCustomerName" />
-      <input size= "4" type="text" ng-model="newCustomerTelephone" />
+      <input type="text" ng-model="newCustomerName" {{ customer.name }}/>
+      <input type="text" ng-model="customer.name" {{ customer.name }}/>
+      <input type="text" ng-model="customer.telephone" {{ customer.telephone }}/>
+      <input size= "8" type="text" ng-model="newCustomerTelephone" />
       <button ng-click="create(newCustomerName)">Créer</button>
       <button ng-click="delete(customer)">Supprimer</button>
+      <button ng-click="update(customer)">Modifier</button>
 </dl>

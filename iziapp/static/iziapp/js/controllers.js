@@ -9,8 +9,8 @@ iziApp.controller('CustomerController', function($scope, $http){
 customerControllers.controller('CustomerListController',['$scope', 'Customer',
   function($scope, Customer){
      $scope.customers = Customer.query();
- }
-  ]);
+    }
+]);
 
 
 customerControllers.controller('CustomerDetailController',['$scope', '$routeParams', 'Customer',
@@ -23,7 +23,6 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
         var customer = new Customer();
         customer.name = newCustomerName;
         customer.email = 'testmail';
-        //customer.telephone = '12345678';
         customer.telephone = $scope.newCustomerTelephone;
         customer.$save();
         //$scope.customers.push(customer);
@@ -31,9 +30,16 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
      // suppression
      $scope.delete = function(customer) {
         console.log('suppression');
-        console.log($scope);
+        //console.log($scope);
         console.log(customer);
-        customer.$save();
+        customer.$remove();
+     }
+      // modification
+     $scope.update = function(customer) {
+        console.log('modificaition');
+        //console.log($scope);
+        console.log(customer);
+        customer.$update();
      }
  }]);
 
