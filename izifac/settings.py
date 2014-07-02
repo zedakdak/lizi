@@ -93,4 +93,4 @@ REST_FRAMEWORK = {
 }
 
 # Supression du slash
-APPEND_SLASH = True
+APPEND_SLASH = False

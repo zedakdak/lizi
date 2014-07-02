@@ -18,6 +18,7 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
      $scope.customerId = $routeParams.customerId;
      //$scope.customer = Customer.query({id: $routeParams.customerId});
      $scope.customer = Customer.get({id: $routeParams.customerId});
+
      // creation
      $scope.create = function(newCustomerName) {
         var customer = new Customer();
@@ -27,6 +28,13 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
         customer.$save();
         //$scope.customers.push(customer);
      }
+     // modification
+     $scope.update = function(customer) {
+        console.log('modification');
+        //console.log($scope);
+        console.log(customer);
+        customer.$update();
+     }
      // suppression
      $scope.delete = function(customer) {
         console.log('suppression');
@@ -34,12 +42,6 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
         console.log(customer);
         customer.$remove();
      }
-      // modification
-     $scope.update = function(customer) {
-        console.log('modificaition');
-        //console.log($scope);
-        console.log(customer);
-        customer.$update();
-     }
+
  }]);
 
