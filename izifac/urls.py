@@ -7,8 +7,7 @@ from iziapp import views
 admin.autodiscover()
 
 # Router de l'application : contient les routes du service web
-# router = DefaultRouter()
-router = DefaultRouter(trailing_slash=False)
+router = DefaultRouter()
 router.register(r'customers', views.CustomerViewSet)
 router.register(r'invoices', views.InvoiceViewSet)
 router.register(r'invoicesitems', views.InvoiceItemViewSet)
