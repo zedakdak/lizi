@@ -20,12 +20,12 @@ customerControllers.controller('CustomerDetailController',['$scope', '$routePara
      $scope.customer = Customer.get({id: $routeParams.customerId});
 
      // creation
-     $scope.create = function(newCustomerName) {
-        var customer = new Customer();
-        customer.name = newCustomerName;
-        customer.email = 'testmail';
-        customer.telephone = $scope.newCustomerTelephone;
-        customer.$save();
+     $scope.create = function(customer) {
+        var zecustomer = new Customer();
+        zecustomer.name = $scope.customer.name;
+        zecustomer.email = 'testmail';
+        zecustomer.telephone = $scope.customer.telephone;
+        zecustomer.$save();
         //$scope.customers.push(customer);
      }
      // modification

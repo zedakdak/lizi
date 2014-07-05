@@ -2,29 +2,27 @@ TBD: detail view for <span>{{customerId}}</span>
 {{ customer.name }}
 <dl>
       <dt>Client</dt>
-      <input type="text" ng-model="newCustomerName" {{ customer.name }}/>
       <input type="text" ng-model="customer.name" {{ customer.name }}/>
       <input type="text" ng-model="customer.telephone" {{ customer.telephone }}/>
-      <input size= "8" type="text" ng-model="newCustomerTelephone" />
-      <button ng-click="create(newCustomerName)">Créer</button>
+      <button ng-click="create(customer)">Créer</button>
       <button ng-click="delete(customer)">Supprimer</button>
       <button ng-click="update(customer)">Modifier</button>
 </dl>
 
 <!-- Formulaire de création du client -->
 <!-- <form name="signup_form" novalidate ng-submit="signupForm()"> -->
-<form name="signup_form" novalidate ng-submit="create(newCustomerName)">
+<form name="signup_form" novalidate ng-submit="create(customer)">
 <fieldset>
 <legend>Création d'un Client</legend>
 
 <!-- Champs du formulaire -->
 <div class="row">
 	<div class="large-12 columns">
-		<label>Your name</label>
+		<label>Nom du Client : </label>
 		<input type="text"
 			placeholder="Nom du Client"
 			name="newCustomerName"
-			ng-model="newCustomerName"
+			ng-model="customer.name"
 			ng-minlength=3
 			ng-maxlength=20 required />
 
