@@ -1,4 +1,9 @@
-/* css de l'application */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
 
 .topPanel {
   font-family: Arial, Helvetica, sans-serif;
@@ -6,29 +11,6 @@
   background-color: #669999;
 }
 
-body {
-  background-color: #fff;
-  border-top: 5px solid #3399cc;
-}
 
-html {
-  background: #fff;
-}
-
-.row {
-  border: 0px solid green;
-}
-
-input.ng-invalid {
-  border: 2px solid red;
-}
-
-input.ng-valid {
-  border: 2px solid green;
-}
-
-.error {
-	background-color: #669999;
-}
 
 
